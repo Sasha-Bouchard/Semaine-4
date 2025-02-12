@@ -52,6 +52,7 @@ found_cube = False
 
 #Commandes valides dès que la lumière est ouverte
 def valid_avec_lumimière(x):
+    lumière = True
     while lumière == True:
             #Ceci devrait être valide et accèssible en tout temps
         if x == "help":
@@ -98,7 +99,8 @@ def activate_cube(x):
                 print("You feel that you should keep unscrewing the cube instead of that")
                 i += -1
             x = str(input("What do you do? "))
-
+if commande == "activate cube":
+    activate_cube(commande)
 
 
 
