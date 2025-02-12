@@ -73,7 +73,23 @@ def valid_avec_lumimière(x):
             found_cube == True
             break
         elif x == "look":
-            pass #à faire plus tard
+            print("You see the following : ")
+            print("- The switch you just flipped")
+            print("- A door")
+            print("- A wall pannel")
+        elif x == "activate door":
+            print("The door is locked")
+        elif x == "examine door":
+            print("It's a door with a keyhole above the handle")
+        elif x == "examine switch":
+            print("It's a standard lightswitch")
+        elif x == "examine pannel":
+            print("The pannel look like it might be able to be turned into the wall")
+            print("It has two square holes, one red and one blue")
+        elif x == "activate pannel":
+            print("The pannel resists your push as you try to turn it.")
+        elif x == "activate cube" or "examine cube":
+            print("What cube are you talking about?")
         else:
             print("invalid command, please try again ")
         commande = str(input("What do you do? "))
@@ -94,6 +110,7 @@ def activate_cube(x):
                 print("You turn the top part of the cube one turn clockwise")
                 if i == 2:
                     print("The cube separates into two halves")
+                    print("You place the red-half and the blue-half in you inventory")
             elif x == "examine cube":
                 print("You watch as the cube somehow thightens itself one turn counterclockwise")
                 i += -2
@@ -103,8 +120,8 @@ def activate_cube(x):
                 print("You feel that you should keep unscrewing the cube instead of that")
                 i += -1
             x = str(input("What do you do? "))
-        global found_cube = False
-        
+        found_cube = False
+
 if commande == "activate cube":
     activate_cube(commande)
 
