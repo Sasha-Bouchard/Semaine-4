@@ -47,7 +47,6 @@ while lumière != True:
     valid_sans_lumière(commande)
 
 #Partie 2 commence ici
-commande = str(input("What do you do? "))
 found_cube = False
 
 #Commandes valides dès que la lumière est ouverte
@@ -66,7 +65,7 @@ def valid_avec_lumimière(x):
         #condition qui va arrêter la boucle et passer à son else
         elif x == "activate switch":
             lumière = False
-        #Besoin de trouver le cube avant de pouvoir l'activer
+        #Besoin de faire cette commande pour continuer continuer
         elif x == "inventory":
             print("You find some sort of cube in your pocket")
             global found_cube
@@ -99,7 +98,17 @@ def valid_avec_lumimière(x):
         commande = str(input("You turn off the light. What do you do after?"))
         valid_sans_lumière(commande)
 
-valid_avec_lumimière(commande)
+while found_cube == False:
+    for i in range(15):
+        commande = str(input("What do you do? "))
+        valid_avec_lumimière(commande)
+        if i < 4:
+            continue
+        print("(Don't forget about the help command)")
+    print("Maybe this game isn't for you")
+    commande = str(input("What do you do? "))
+    valid_avec_lumimière(commande)
+
 
 commande = str(input("What do you do? "))
 #

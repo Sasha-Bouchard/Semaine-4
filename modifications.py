@@ -4,5 +4,6 @@ MODIFICATIONS:
 - Ajout de commentaires pour expliquer certaines parties du code et ajout qqch à la "todo list" dans 
 l'analyse.
 - Ajout des commandes valides avant de trouver le cube
+- Ajout de la boucle qui roule en attendant de trouver le cube
 
 '''
