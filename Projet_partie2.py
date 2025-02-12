@@ -63,8 +63,10 @@ def valid_avec_lumimière(x):
             print("get X : add the object X to the inventory, if possible")
             print("activate X : interact with X with the intension of changing it's state")
             print("use X on Y : interact with Y by using item X from your inventory")
+        #condition qui va arrêter la boucle et passer à son else
         elif x == "activate switch":
             lumière = False
+        #Besoin de trouver le cube avant de pouvoir l'activer
         elif x == "inventory":
             print("You find some sort of cube in your pocket")
             global found_cube
@@ -76,6 +78,7 @@ def valid_avec_lumimière(x):
             print("invalid command, please try again ")
         commande = str(input("What do you do? "))
         valid_avec_lumimière(commande)
+    #Si la boucle pert la condition de la lumière, elle passe à ceci
     else:
         commande = str(input("You turn off the light. What do you do after?"))
         valid_sans_lumière(commande)
@@ -83,6 +86,7 @@ def valid_avec_lumimière(x):
 valid_avec_lumimière(commande)
 
 commande = str(input("What do you do? "))
+#
 def activate_cube(x):
     if found_cube == True and x == "activate cube":
         for i in range(3):
@@ -99,6 +103,8 @@ def activate_cube(x):
                 print("You feel that you should keep unscrewing the cube instead of that")
                 i += -1
             x = str(input("What do you do? "))
+        global found_cube = False
+        
 if commande == "activate cube":
     activate_cube(commande)
 

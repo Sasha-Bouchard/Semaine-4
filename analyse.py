@@ -8,3 +8,6 @@ valides
 - Pas encore eu de débuggage
 '''
 
+'''
+- Besoin de différencier les 2 moitiers du cube une fois ouvert
+'''
