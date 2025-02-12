@@ -7,5 +7,5 @@ l'analyse.
 - Ajout de la boucle qui roule en attendant de trouver le cube
 - Ajout de la boucle qui roule en attendant d'ouvrir le cube et son ouverture
 - Ajout de commantaires et création du README.md
-
+- Écriture du README
 '''
